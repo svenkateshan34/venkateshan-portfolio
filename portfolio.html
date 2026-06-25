@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S Venkateshan | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#0b1120;color:#fff;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:18px 8%;background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:999}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+background:linear-gradient(-45deg,#0b1120,#111827,#0ea5e9,#1e293b);background-size:400% 400%;animation:bg 12s ease infinite}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.hero img{width:180px;height:180px;border-radius:50%;border:4px solid #38bdf8;object-fit:cover}
+.hero h1{font-size:3rem;margin:15px 0}
+.hero span{color:#38bdf8}
+.typing{font-size:1.4rem;color:#7dd3fc;height:40px}
+.btn{display:inline-block;padding:12px 24px;margin:10px;border-radius:30px;background:#38bdf8;color:#000;text-decoration:none;font-weight:bold}
+section{padding:90px 10%}
+.title{text-align:center;font-size:2.2rem;margin-bottom:30px}
+.card{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);padding:25px;border-radius:18px;transition:.4s}
+.card:hover{transform:translateY(-8px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.skill{margin:18px 0}
+.bar{height:10px;background:#1e293b;border-radius:20px}
+.fill{height:10px;background:#38bdf8;border-radius:20px}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.active{opacity:1;transform:none}
+footer{text-align:center;padding:30px;background:#020617}
+@media(max-width:768px){.hero h1{font-size:2.2rem}nav{padding:15px 5%}}
+</style>
+</head>
+<body>
+<nav>
+<div><b>S Venkateshan</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+    
+<img src="profile.jpg" alt="Profile Photo">
+<h1>Hi, I'm <span>S Venkateshan</span></h1>
+<div class="typing"></div>
+<p>Aspiring Software Developer passionate about Java, SQL and Front-End Development.</p>
+<br>
+<a class="btn" href="https://github.com/svenkateshan34">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/venkateshan-shanmugam16">LinkedIn</a>
+</div>
+</section>
+
+<section id="about" class="reveal">
+<h2 class="title">About Me</h2>
+<div class="card">
+Highly motivated B.Tech student with internship experience at KodNest Technologies. Strong foundation in Java, SQL, Front-End Development, Problem Solving and Team Collaboration.
+</div>
+</section>
+
+<section id="skills" class="reveal">
+<h2 class="title">Skills</h2>
+<div class="skill">Java<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+<div class="skill">SQL<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+<div class="skill">Front-End<div class="bar"><div class="fill" style="width:75%"></div></div></div>
+<div class="skill">Problem Solving<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+</section>
+
+<section id="projects" class="reveal">
+<h2 class="title">Projects</h2>
+<div class="grid">
+<div class="card">
+<h3>Smart Crane Monitoring System</h3>
+<p>IoT-based monitoring system for crane load, angle and vibration with predictive maintenance and safety alerts.</p>
+</div>
+<div class="card">
+<h3>KodNest Internship</h3>
+<p>Worked on Java, MySQL, Front-End Technologies and Manual Testing on live projects.</p>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="title">Education</h2>
+<div class="grid">
+<div class="card"><h3>B.Tech</h3><p>Sri Venkateswara College of Engineering and Technology (2026) </p></div>
+<div class="card"><h3>12th Grade</h3><p>Govt Junior College Chittoor</p></div>
+<div class="card"><h3>10th Grade</h3><p>Govt H S Bommasamudram</p></div>
+</div>
+</section>
+
+
+<section id="contact" class="contact reveal">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+
+        <a href="mailto:svenkateshan34@gmail.com" class="contact-card">
+            📧 Email Me
+        </a>
+
+        <a href="tel:+916302693118" class="contact-card">
+            📱 Call Me
+        </a>
+
+        <a href="https://wa.me/916302693118" target="_blank" class="contact-card">
+            💬 WhatsApp
+        </a>
+
+        <a href="https://github.com/svenkateshan34" target="_blank" class="contact-card">
+            💻 GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/venkateshan-shanmugam-16/" target="_blank" class="contact-card">
+            🔗 LinkedIn
+        </a>
+
+    </div>
+</section>
+<css> 
+
+<footer>© 2026 S Venkateshan Portfolio</footer>
+
+<script>
+const words=["Java Developer","FrontEnd Developer","SQL Developer","Problem Solver"];
+let i=0,j=0,del=false;
+function type(){
+let el=document.querySelector(".typing");
+let w=words[i];
+el.textContent=w.substring(0,j);
+if(!del){j++; if(j>w.length){del=true; setTimeout(type,1000); return;}}
+else{j--; if(j==0){del=false;i=(i+1)%words.length;}}
+setTimeout(type,del?50:100);
+}
+type();
+
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".reveal").forEach(e=>{
+if(e.getBoundingClientRect().top<window.innerHeight-100)e.classList.add("active");
+});
+});
+</script>
+</body>
+</html>
+</css> 
