@@ -9,7 +9,7 @@ Welcome to my portfolio repository! I am an aspiring **Java Full Stack Developer
 ## 🌐 Live Portfolio
 
 👉 **Portfolio Website:**  
-https://svenkateshan34.github.io/portfolio/
+https://svenkateshan34.github.io/venkateshan-portfolio/
 
 ---
 
